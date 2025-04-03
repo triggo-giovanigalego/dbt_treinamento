@@ -46,4 +46,13 @@ flags:
 models:
   my_new_project:
     example:
+      +schema: "{{ target.schema if target.name == 'dev' else 'example'}}"
+      +materialized: table
+
+    staging:
+      +schema: "{{ target.schema if target.name == 'dev' else 'staging'}}"
+      +materialized: table
+    
+    marts:
+      +schema: "{{ target.schema if target.name == 'dev' else 'marts'}}"
       +materialized: table
