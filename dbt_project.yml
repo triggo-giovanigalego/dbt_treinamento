@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'demo_project'
 version: '1.0.0'
 config-version: 2
 
@@ -44,7 +44,7 @@ flags:
   source_freshness_run_project_hooks: True
 
 models:
-  my_new_project:
+  demo_project:
     staging:
       +schema: "{{ target.schema if target.name == 'dev' else 'staging'}}"
       +materialized: table
