@@ -1,1 +1,0 @@
-select current_date() as data_atual
