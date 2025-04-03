@@ -39,4 +39,8 @@ sources:
 
       - name: orders
         description: Orders made.
-        
+        columns:
+        - name: o_custkey
+          description: Customer key.
+        - name: o_orderdate
+          description: Date when order was made.
