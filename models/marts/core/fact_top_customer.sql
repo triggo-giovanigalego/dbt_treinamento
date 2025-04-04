@@ -13,3 +13,4 @@ select
 from top_customers as top_cus
 inner join {{ref('dim_customer')}} as dim on dim.c_custkey = top_cus.o_custkey
 qualify rank() over(order by totalprice desc) <= 5
+
